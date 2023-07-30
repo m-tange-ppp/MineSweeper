@@ -21,7 +21,7 @@ public class MineSweeper {
 
 	private Timer timer = new Timer();
 
-	public static Label timerLabel = new Label("Elapsed Time: 0 seconds");
+	public static Label timerLabel = new Label("経過時間: 0 秒");
 
 	private final int[] elapsed = { 0 };
 
@@ -153,7 +153,7 @@ public class MineSweeper {
 	}
 
 	private void resetTimer() {
-		timerLabel.setText("Elapsed Time: 0 seconds");
+		timerLabel.setText("経過時間: 0 秒");
 		elapsed[0] = 0;
 		timer = new Timer();
 		timer.scheduleAtFixedRate(new TimerTask() {
@@ -161,7 +161,7 @@ public class MineSweeper {
 			public void run() {
 				Platform.runLater(() -> {
 					elapsed[0]++;
-					timerLabel.setText("Elapsed Time: " + elapsed[0] + " seconds");
+					timerLabel.setText("経過時間: " + elapsed[0] + " 秒");
 				});
 			}
 		}, 1000, 1000);
